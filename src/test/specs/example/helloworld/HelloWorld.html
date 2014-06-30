@@ -1,0 +1,30 @@
+<html xmlns:concordion="http://www.concordion.org/2007/concordion">
+<head>
+<link href="../../concordion.css" rel="stylesheet" type="text/css" />
+<title>HelloWorld</title>
+</head>
+
+<body>
+  
+  <p>
+    Upon login, the greeting for user <span concordion:set="#firstName">Joe</span> 
+    will be: <span concordion:assertEquals="greetingFor(#firstName)">Hello Joe!</span>
+  </p>
+  
+  <p concordion:execute="#greeting = greetingFor(#firstName)">
+    The greeting "<span concordion:assertEquals="#greeting">Hello David!</span>" 
+    should be given to the user <span concordion:set="#firstName">David</span>
+    when he logs in. 
+  </p>
+  
+  <p>
+    Given a user <span concordion:set="#firstName">Bob</span><br/>
+    When Bob logs in,<br/>
+    Then a greeting is displayed saying "<span concordion:assertEquals="greetingFor(#firstName)">Hello Bob!</span>"
+  </p>
+  
+  <p>
+    When <span concordion:set="#firstName">John</span> logs in, a greeting "<span concordion:assertEquals="greetingFor(#firstName)">Hello John!</span>" is displayed.
+  </p>
+</body>
+</html>
