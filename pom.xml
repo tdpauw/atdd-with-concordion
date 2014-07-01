@@ -50,7 +50,7 @@
                 </goals>
                 <configuration>
                   <sources>
-                    <source>${basedir}/src/test/specs</source>
+                    <source>${basedir}/src/specs/java</source>
                   </sources>
                 </configuration>
               </execution>
@@ -63,7 +63,7 @@
                 <configuration>
                   <resources>
                     <resource>
-                      <directory>${basedir}/src/test/specs</directory>
+                      <directory>${basedir}/src/specs/resources</directory>
                       <includes>
                         <include>**/*.html</include>
                       </includes>
